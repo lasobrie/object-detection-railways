@@ -1,0 +1,14 @@
+# Core
+ultralytics>=8.2.0
+torch            # install a version matching your OS/CUDA from https://pytorch.org
+numpy
+opencv-python
+pillow
+matplotlib
+pandas
+
+# Data
+kagglehub
+
+# Notebook environment
+jupyterlab
