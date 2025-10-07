@@ -1,11 +1,16 @@
 # Railway Track Fault Classification (Ultralytics YOLO)
 
-Lightweight prototype to **classify** railway track images as **OK** or **FAIL** using Ultralytics (YOLO) with PyTorch. The notebook automates fetching a public Kaggle dataset via **kagglehub**, sets up a simple project folder, and shows how to start training a YOLO **classification** model.
+Lightweight prototype to **classify** railway track images as **OK** or **FAIL** using Ultralytics (YOLO*) with PyTorch. The notebook sets up a simple project folder, and shows how to start training a YOLO **classification** model.
+
+*Khanam, R., & Hussain, M. (2024). Yolov11: An overview of the key architectural enhancements. arXiv preprint arXiv:2410.17725.
 
 ## Contents
-- `Object_Detection_Vibrant_Virginia.ipynb` — main notebook
-- `requirements.txt` — Python dependencies
-- (created at runtime) `railway-track-fault-detection/` — dataset copy
+- `Object_Detection_Vibrant_Virginia.ipynb` -> main notebook
+- `requirements.txt` -> Python dependencies
+- `data/` -> sample images from our project, for larger image sets use Kaggle
+- `model/` -> the starting YOLO 11 model for classification: yolo11n-cls.pt
+- `runs/` -> the train logs of the updated YOLO model for railway tracks breaks and failures
+
 
 ## Quickstart
 ```bash
