@@ -28,7 +28,7 @@ jupyter lab
 > **GPU note:** Training benefits from an NVIDIA GPU + CUDA. CPU-only works for small tests but will be slow. If you install `torch` manually for your platform/CUDA, do it **before** installing `ultralytics` or pin the appropriate wheel from https://pytorch.org.
 
 ## Dataset
-This notebook downloads the public Kaggle dataset:
+This notebook uses images from the Virginia Tech Systems Performance Lab. An alternative may be to use open-source data which can be downloaded via Kaggle. For example:
 - **salmaneunus/railway-track-fault-detection** (via `kagglehub`)
 
 At runtime it copies the dataset into a local folder:
@@ -36,15 +36,13 @@ At runtime it copies the dataset into a local folder:
 railway-track-fault-detection/
 ```
 
-`kagglehub` can fetch many public datasets without a Kaggle API key. If you hit rate limits or permission issues, set your Kaggle credentials as described in the Kaggle docs.
-
 ## Training (classification)
 Inside the notebook, look for the **Train (classification task)** cell. If it’s commented, you can start with defaults like:
 ```python
 from ultralytics import YOLO
 
 # Create a classification model (e.g., yolov8n-cls) and train
-model = YOLO("yolov8n-cls.pt")  # or "yolov10n-cls.pt" if available
+model = YOLO("yolov11n-cls.pt")  # or "yolov10n-cls.pt" if available
 model.train(
     data="railway-track-fault-detection",  # folder with subfolders per class
     epochs=50,
@@ -72,5 +70,13 @@ print(pred)
 - **Kaggle download**: If `kagglehub` fails, manually download the dataset and place it under `railway-track-fault-detection/`.
 
 ## License
-Educational/research prototype. Add a license that fits your use (e.g., MIT).
+
+This project is released under the [MIT License].
+
+You are free to use, copy, modify, merge, publish, and distribute this work, provided that proper credit is given to the original author:
+
+**© 2025 Léon Sobrie**
+
+This repository is intended for **educational and research purposes** related to railway object detection and computer vision using YOLO.  
+The software is provided *“as is”*, without warranty of any kind.
 
