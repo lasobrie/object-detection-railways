@@ -7,9 +7,11 @@ Lightweight prototype to **classify** railway track images as **OK** or **FAIL**
 ## Contents
 - `Object_Detection_Vibrant_Virginia.ipynb` -> main notebook
 - `requirements.txt` -> Python dependencies
+- `notebooks/` -> contains the object classification notebook, and the video-to-images notebook
 - `data/` -> sample images from our project, for larger image sets use Kaggle
 - `model/` -> the starting YOLO 11 model for classification: yolo11n-cls.pt
 - `runs/` -> the train logs of the updated YOLO model for railway tracks breaks and failures
+- `videos/` -> the videos of the model trains with no defects and defects, used to extract images
 
 
 ## Quickstart
